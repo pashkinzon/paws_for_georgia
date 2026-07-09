@@ -2,6 +2,8 @@
 
 A responsive React/Vite website for volunteer dog rescue, with shareable dog profile pages for Vesta, Puri, Odi, and Billie.
 
+The site defaults to English and includes a visible language toggle for English, German, and Russian.
+
 ## Run locally
 
 ```bash

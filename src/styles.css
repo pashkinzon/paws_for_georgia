@@ -16,3 +16,12 @@
 .hero-photo-crop{position:absolute;top:0;bottom:0;left:50%;aspect-ratio:708/965;transform:translateX(-50%);overflow:hidden;z-index:1}
 .hero-photo-crop img{position:absolute;max-width:none;width:135.593%;height:132.642%;left:-3.814%;top:-12.021%;object-fit:fill}
 .volunteer-card{z-index:2}
+
+.language-toggle{display:flex;align-items:center;gap:3px;padding:4px;border:1px solid #d8cbb9;border-radius:999px;background:#fffaf2;box-shadow:0 5px 14px #5f4d2b12;flex-shrink:0}
+.language-toggle button{width:36px;height:30px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-size:11px;font-weight:900;letter-spacing:0;cursor:pointer}
+.language-toggle button.active{background:var(--green);color:white;box-shadow:0 4px 10px #1c351d25}
+.language-toggle button:hover:not(.active){background:#ebe3d5;color:var(--green)}
+
+@media(max-width:1180px){.language-toggle{order:3}.language-toggle button{width:34px}}
+@media(max-width:900px){.language-toggle{margin-left:0;order:0}.menu-button{margin-left:0}.nav{z-index:30}.header{gap:14px}}
+@media(max-width:600px){.language-toggle{padding:3px;gap:2px}.language-toggle button{width:31px;height:28px;font-size:10px}.header{gap:10px}.logo strong{font-size:18px}}
