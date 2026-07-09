@@ -5,10 +5,12 @@ import {
   Heart, House, Mail, MapPin, Menu, MessageCircle, PawPrint, Send,
   Share2, ShieldCheck, Sparkles, Syringe, X,
 } from 'lucide-react'
-import { googleFormsConfigured, submitToGoogleForms } from './googleForms'
 import mainDogImage from '../main-dog.jpeg'
 
 const telegramUrl = 'https://t.me/pashkinzon'
+const whatsappUrl = 'https://wa.me/491623657459'
+const emailUrl = 'mailto:pashkinzonch@gmail.com'
+const contactPerson = 'Pavel Polishchuk'
 const languages = [
   { code: 'en', label: 'EN' },
   { code: 'de', label: 'DE' },
@@ -64,20 +66,23 @@ const siteText = {
     waiting: '4 waiting for love',
     meet: 'Meet',
     contactTitle: 'Have a Question or Want to Adopt?',
-    contactText: 'We’re here to help and answer all your questions.',
-    telegram: 'Chat with us on Telegram',
-    contactForm: 'Contact Form',
-    followTitle: 'Want to Follow a Dog’s Story?',
-    followText: 'Leave your email and we’ll keep you updated on your favorite dog.',
-    emailLabel: 'Your email address',
-    emailPlaceholder: 'Your email address',
-    keepUpdated: 'Keep Me Updated',
-    formDefault: 'You can unsubscribe anytime.',
-    formMissing: 'Almost ready — add your Google Form IDs in .env to collect signups.',
-    formSuccess: 'Thank you! We’ll keep you updated.',
-    formError: 'Something went wrong. Please try again.',
+    contactText: 'You will reach Pavel Polishchuk, the volunteer who created this website and connects interested adopters with the volunteers in Georgia.',
+    telegram: 'Text Pavel on Telegram',
+    whatsappContact: 'Text Pavel on WhatsApp',
+    emailContact: 'Email Pavel',
+    openContact: 'Contact Pavel',
+    modalTitle: 'You are reaching a volunteer',
+    modalText: 'Pavel Polishchuk created this website to help find potential homes for dogs from Georgia. He does not accept adoption money and will connect you with the volunteers in Batumi who know the dogs and help with relocation.',
+    modalHelpText: 'If you want to help directly, Pavel can share the contact details of the Georgian volunteers. They often need help with food, vet visits, parasite treatments, vaccinations, and daily care.',
+    closeContact: 'Close contact options',
+    volunteerTitle: '100% volunteer. No adoption profit.',
+    volunteerText: 'We do not profit from adoption in any way. This website exists to connect future owners with volunteers in Georgia who care for the dogs and help with relocation. Those volunteers are also unpaid and do this out of love for dogs.',
+    volunteerNote: 'No adoption fee is taken by us. Any relocation-related costs are discussed transparently with the volunteers who actually care for and transport the dog.',
+    helpTitle: 'Want to help the dogs directly?',
+    helpText: 'Volunteers in Georgia need practical support every day: food for street dogs and foster dogs, vet visits, treatments, vaccinations, and emergency care.',
+    helpNote: 'We do not collect or accept money ourselves. Contact Pavel and he will share the details of the volunteers in Georgia so you can help directly.',
     footerText: 'Volunteer-powered dog rescue connecting Georgia with loving homes across Europe.',
-    emailUs: 'Email us',
+    emailUs: 'Email Pavel',
     backToDogs: 'Back to all dogs',
     ready: 'Ready for adoption',
     profileEyebrow: 'Looking for a home',
@@ -129,20 +134,23 @@ const siteText = {
     waiting: '4 warten auf Liebe',
     meet: 'Lerne',
     contactTitle: 'Fragen oder Interesse an einer Adoption?',
-    contactText: 'Wir helfen gern und beantworten alle Fragen.',
-    telegram: 'Schreib uns auf Telegram',
-    contactForm: 'Kontaktformular',
-    followTitle: 'Möchtest du eine Hundegeschichte begleiten?',
-    followText: 'Hinterlasse deine E-Mail und wir halten dich zu deinem Lieblingshund auf dem Laufenden.',
-    emailLabel: 'Deine E-Mail-Adresse',
-    emailPlaceholder: 'Deine E-Mail-Adresse',
-    keepUpdated: 'Updates erhalten',
-    formDefault: 'Du kannst dich jederzeit abmelden.',
-    formMissing: 'Fast fertig — füge deine Google-Form-IDs in .env hinzu, um Anmeldungen zu sammeln.',
-    formSuccess: 'Danke! Wir halten dich auf dem Laufenden.',
-    formError: 'Etwas ist schiefgelaufen. Bitte versuche es erneut.',
+    contactText: 'Du erreichst Pavel Polishchuk, den Freiwilligen, der diese Website erstellt hat und Interessenten mit den Freiwilligen in Georgien verbindet.',
+    telegram: 'Pavel auf Telegram schreiben',
+    whatsappContact: 'Pavel auf WhatsApp schreiben',
+    emailContact: 'Pavel per E-Mail kontaktieren',
+    openContact: 'Pavel kontaktieren',
+    modalTitle: 'Du kontaktierst einen Freiwilligen',
+    modalText: 'Pavel Polishchuk hat diese Website erstellt, um für Hunde aus Georgien mögliche Zuhause zu finden. Er nimmt kein Geld für Adoptionen an und verbindet dich mit den Freiwilligen in Batumi, die die Hunde kennen und bei der Ausreise helfen.',
+    modalHelpText: 'Wenn du direkt helfen möchtest, kann Pavel die Kontaktdaten der Freiwilligen in Georgien weitergeben. Sie brauchen oft Hilfe für Futter, Tierarztbesuche, Behandlungen, Impfungen und tägliche Versorgung.',
+    closeContact: 'Kontaktoptionen schließen',
+    volunteerTitle: '100% freiwillig. Kein Gewinn durch Adoption.',
+    volunteerText: 'Wir profitieren in keiner Weise von Adoptionen. Diese Website verbindet zukünftige Besitzer mit Freiwilligen in Georgien, die die Hunde versorgen und bei der Ausreise helfen. Auch diese Freiwilligen werden nicht bezahlt und tun es aus Liebe zu Hunden.',
+    volunteerNote: 'Wir nehmen keine Schutzgebühr an. Kosten im Zusammenhang mit der Ausreise werden transparent mit den Freiwilligen besprochen, die den Hund tatsächlich betreuen und transportieren.',
+    helpTitle: 'Möchtest du direkt helfen?',
+    helpText: 'Freiwillige in Georgien brauchen täglich praktische Hilfe: Futter für Straßen- und Pflegehunde, Tierarztbesuche, Behandlungen, Impfungen und Notfallversorgung.',
+    helpNote: 'Wir sammeln und nehmen selbst kein Geld an. Kontaktiere Pavel, und er teilt die Daten der Freiwilligen in Georgien, damit du direkt helfen kannst.',
     footerText: 'Freiwillige Hundehilfe, die Georgien mit liebevollen Zuhause in Europa verbindet.',
-    emailUs: 'E-Mail schreiben',
+    emailUs: 'Pavel per E-Mail',
     backToDogs: 'Zurück zu allen Hunden',
     ready: 'Bereit für die Adoption',
     profileEyebrow: 'Sucht ein Zuhause',
@@ -194,20 +202,23 @@ const siteText = {
     waiting: '4 ждут любви',
     meet: 'Познакомиться:',
     contactTitle: 'Есть вопросы или хотите забрать собаку?',
-    contactText: 'Мы рядом, чтобы помочь и ответить на все вопросы.',
-    telegram: 'Написать нам в Telegram',
-    contactForm: 'Форма контакта',
-    followTitle: 'Хотите следить за историей собаки?',
-    followText: 'Оставьте e-mail, и мы будем присылать новости о вашей любимой собаке.',
-    emailLabel: 'Ваш e-mail',
-    emailPlaceholder: 'Ваш e-mail',
-    keepUpdated: 'Получать новости',
-    formDefault: 'Вы сможете отписаться в любой момент.',
-    formMissing: 'Почти готово — добавьте Google Form IDs в .env, чтобы собирать заявки.',
-    formSuccess: 'Спасибо! Мы будем держать вас в курсе.',
-    formError: 'Что-то пошло не так. Попробуйте ещё раз.',
+    contactText: 'Вы напишете Павлу Полищуку, волонтёру, который создал этот сайт и связывает заинтересованных людей с волонтёрами в Грузии.',
+    telegram: 'Написать Павлу в Telegram',
+    whatsappContact: 'Написать Павлу в WhatsApp',
+    emailContact: 'Написать Павлу на e-mail',
+    openContact: 'Связаться с Павлом',
+    modalTitle: 'Вы связываетесь с волонтёром',
+    modalText: 'Павел Полищук создал этот сайт, чтобы помочь собакам из Грузии найти потенциальные дома. Он не принимает деньги за усыновление и свяжет вас с волонтёрами в Батуми, которые знают собак и помогают с переездом.',
+    modalHelpText: 'Если вы хотите помочь напрямую, Павел может поделиться контактами волонтёров в Грузии. Им часто нужна помощь с кормом, оплатой ветеринара, обработками, вакцинами и ежедневным уходом.',
+    closeContact: 'Закрыть варианты контакта',
+    volunteerTitle: '100% волонтёрский проект. Без прибыли от усыновления.',
+    volunteerText: 'Мы никак не зарабатываем на усыновлении. Этот сайт связывает будущих хозяев с волонтёрами в Грузии, которые заботятся о собаках и помогают с переездом. Эти волонтёры тоже не получают оплату и делают всё из любви к собакам.',
+    volunteerNote: 'Мы не берём плату за усыновление. Все расходы, связанные с переездом, обсуждаются прозрачно с волонтёрами, которые реально заботятся о собаке и организуют дорогу.',
+    helpTitle: 'Хотите помочь собакам напрямую?',
+    helpText: 'Волонтёрам в Грузии каждый день нужна практическая помощь: корм для уличных собак и собак на передержке, визиты к ветеринару, лечения, вакцины и срочная помощь.',
+    helpNote: 'Мы сами не собираем и не принимаем деньги. Напишите Павлу, и он поделится контактами волонтёров в Грузии, чтобы вы могли помочь напрямую.',
     footerText: 'Волонтёрский проект, соединяющий собак из Грузии с любящими домами в Европе.',
-    emailUs: 'Написать e-mail',
+    emailUs: 'E-mail Павла',
     backToDogs: 'Назад ко всем собакам',
     ready: 'Готова к усыновлению',
     profileEyebrow: 'Ищет дом',
@@ -384,7 +395,7 @@ function LanguageToggle({ lang, setLang }) {
   </div>
 }
 
-function Header({ lang, setLang, text }) {
+function Header({ lang, setLang, text, openContact }) {
   const [open, setOpen] = useState(false)
   const navigate = (id) => {
     setOpen(false)
@@ -398,7 +409,7 @@ function Header({ lang, setLang, text }) {
       {text.nav.map((label, index) => <Link key={label} to="/" onClick={() => navigate(navIds[index])}>{label}</Link>)}
     </nav>
     <LanguageToggle lang={lang} setLang={setLang} />
-    <a className="button outline header-telegram" href={telegramUrl} target="_blank" rel="noreferrer"><Send size={17}/> Telegram</a>
+    <button className="button outline header-telegram" type="button" onClick={openContact}><Send size={17}/> Telegram</button>
   </header>
 }
 
@@ -445,6 +456,24 @@ function AdoptionProcess({ text }) {
   </section>
 }
 
+function VolunteerSection({ text, openContact }) {
+  return <section className="section volunteer-section" id="about">
+    <div className="volunteer-copy">
+      <span className="eyebrow"><Heart/> {text.heroNote}</span>
+      <h2>{text.volunteerTitle}</h2>
+      <p>{text.volunteerText}</p>
+      <strong>{text.volunteerNote}</strong>
+    </div>
+    <div className="help-direct" id="help">
+      <PawPrint/>
+      <h3>{text.helpTitle}</h3>
+      <p>{text.helpText}</p>
+      <small>{text.helpNote}</small>
+      <button className="button primary" type="button" onClick={openContact}><MessageCircle/> {text.openContact}</button>
+    </div>
+  </section>
+}
+
 function DogCard({ dog, text }) {
   return <article className="dog-card">
     <Link to={`/dogs/${dog.slug}`} className="dog-image-link"><img src={dog.photos[0].src} alt={dog.name}/><span>{text.meet} {dog.name} <ChevronRight/></span></Link>
@@ -463,27 +492,38 @@ function DogsSection({ dogs, text }) {
   </section>
 }
 
-function FormsSection({ text }) {
-  const [email, setEmail] = useState('')
-  const [status, setStatus] = useState('')
-  const submit = async (event) => {
-    event.preventDefault()
-    if (!googleFormsConfigured) { setStatus(text.formMissing); return }
-    try { await submitToGoogleForms({ email }); setStatus(text.formSuccess); setEmail('') }
-    catch { setStatus(text.formError) }
-  }
+function ContactModal({ text, onClose }) {
+  return <div className="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
+    <button className="contact-backdrop" type="button" onClick={onClose} aria-label={text.closeContact} />
+    <article className="contact-panel">
+      <button className="contact-close" type="button" onClick={onClose} aria-label={text.closeContact}><X/></button>
+      <span className="eyebrow"><MessageCircle/> {contactPerson}</span>
+      <h2 id="contact-modal-title">{text.modalTitle}</h2>
+      <p>{text.modalText}</p>
+      <p>{text.modalHelpText}</p>
+      <div className="contact-options">
+        <a className="button primary" href={telegramUrl} target="_blank" rel="noreferrer"><Send/> {text.telegram}</a>
+        <a className="button outline" href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle/> {text.whatsappContact}</a>
+        <a className="button outline" href={emailUrl}><Mail/> {text.emailContact}</a>
+      </div>
+    </article>
+  </div>
+}
+
+function ContactSection({ text, openContact }) {
   return <section className="section action-grid" id="contact">
-    <article className="action-card" id="about"><Heart/><div><h2>{text.contactTitle}</h2><p>{text.contactText}</p><div className="action-buttons"><a className="button primary" href={telegramUrl} target="_blank" rel="noreferrer"><Send/> {text.telegram}</a><a className="button outline" href="mailto:hello@pawsfromgeorgia.org"><Mail/> {text.contactForm}</a></div></div><PawPrint className="watermark"/></article>
-    <article className="action-card" id="follow"><Heart/><div><h2>{text.followTitle}</h2><p>{text.followText}</p><form onSubmit={submit}><label className="sr-only" htmlFor="email">{text.emailLabel}</label><input id="email" type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder={text.emailPlaceholder}/><button className="button primary" type="submit"><Heart/> {text.keepUpdated}</button></form><small className="form-status">{status || text.formDefault}</small></div><PawPrint className="watermark"/></article>
+    <article className="action-card"><Heart/><div><h2>{text.contactTitle}</h2><p>{text.contactText}</p><div className="action-buttons"><button className="button primary" type="button" onClick={openContact}><Send/> {text.openContact}</button><a className="button outline" href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle/> WhatsApp</a></div></div><PawPrint className="watermark"/></article>
+    <article className="action-card"><PawPrint/><div><h2>{text.helpTitle}</h2><p>{text.helpNote}</p><div className="action-buttons"><button className="button primary" type="button" onClick={openContact}><Heart/> {text.openContact}</button><a className="button outline" href={emailUrl}><Mail/> {text.emailContact}</a></div></div><PawPrint className="watermark"/></article>
   </section>
 }
 
 function Footer({ text }) {
-  return <footer id="help"><Logo text={text}/><p>{text.footerText}</p><div><a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a><a id="faq" href="mailto:hello@pawsfromgeorgia.org">{text.emailUs}</a></div><small>© {new Date().getFullYear()} Paws from Georgia</small></footer>
+  return <footer><Logo text={text}/><p>{text.footerText}</p><div><a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a><a id="faq" href={emailUrl}>{text.emailUs}</a></div><small>© {new Date().getFullYear()} Paws from Georgia</small></footer>
 }
 
 function HomePage({ lang, setLang, text, dogs }) {
-  return <><Header lang={lang} setLang={setLang} text={text}/><main><Hero text={text}/><AdoptionProcess text={text}/><DogsSection dogs={dogs} text={text}/><FormsSection text={text}/></main><Footer text={text}/></>
+  const [contactOpen, setContactOpen] = useState(false)
+  return <><Header lang={lang} setLang={setLang} text={text} openContact={() => setContactOpen(true)}/><main><Hero text={text}/><AdoptionProcess text={text}/><VolunteerSection text={text} openContact={() => setContactOpen(true)}/><DogsSection dogs={dogs} text={text}/><ContactSection text={text} openContact={() => setContactOpen(true)}/></main><Footer text={text}/>{contactOpen && <ContactModal text={text} onClose={() => setContactOpen(false)}/>}</>
 }
 
 function DogProfile({ lang, setLang, text, dogs }) {
@@ -491,6 +531,7 @@ function DogProfile({ lang, setLang, text, dogs }) {
   const dog = dogs.find(item => pathname.endsWith(item.slug))
   const photoCount = dog?.photos.length || 0
   const [viewerIndex, setViewerIndex] = useState(null)
+  const [contactOpen, setContactOpen] = useState(false)
   useEffect(() => window.scrollTo(0, 0), [pathname])
   useEffect(() => {
     if (viewerIndex === null || photoCount === 0) return undefined
@@ -516,13 +557,13 @@ function DogProfile({ lang, setLang, text, dogs }) {
     if (navigator.share) await navigator.share(data)
     else { await navigator.clipboard.writeText(profileUrl); alert(text.linkCopied) }
   }
-  return <><Header lang={lang} setLang={setLang} text={text}/><main className="profile-page">
+  return <><Header lang={lang} setLang={setLang} text={text} openContact={() => setContactOpen(true)}/><main className="profile-page">
     <Link className="back-link" to="/#dogs"><ArrowLeft/> {text.backToDogs}</Link>
     <div className="profile-layout">
       <button className="profile-image image-button" type="button" onClick={() => setViewerIndex(0)} aria-label={`${text.openPhoto}: ${dog.name}`}>
         <img src={dog.photos[0].src} alt={dog.name}/><span><ShieldCheck/> {text.ready}</span>
       </button>
-      <div className="profile-copy"><span className="eyebrow"><PawPrint/> {text.profileEyebrow}</span><h1>{dog.name}</h1><div className="profile-meta"><span>{dog.age}</span><i/><span>{dog.sex}</span><i/><span><MapPin/>{dog.location}</span></div><div className="tags large">{dog.tags.map(tag => <span key={tag}><Check/>{tag}</span>)}</div><p className="lead">{dog.bio}</p><p>{dog.longBio}</p><div className="profile-actions"><a className="button primary" href={`${telegramUrl}?text=${encodeURIComponent(`Hi! I would love to learn more about ${dog.name}.`)}`} target="_blank" rel="noreferrer"><Send/> {text.askAbout} {dog.name}</a><button className="button outline" onClick={share}><Share2/> {text.shareProfile}</button></div><div className="share-row" aria-label={`${text.shareOn} ${dog.name}`}><span>{text.shareOn}</span><a href={`https://wa.me/?text=${encodedMessage}`} target="_blank" rel="noreferrer">{text.whatsapp}</a><a href={`https://t.me/share/url?url=${encodeURIComponent(profileUrl)}&text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">Telegram</a><a href={`sms:?body=${encodedMessage}`}>{text.messages}</a><a href={`mailto:?subject=${encodedSubject}&body=${encodedMessage}`}>{text.email}</a></div></div>
+      <div className="profile-copy"><span className="eyebrow"><PawPrint/> {text.profileEyebrow}</span><h1>{dog.name}</h1><div className="profile-meta"><span>{dog.age}</span><i/><span>{dog.sex}</span><i/><span><MapPin/>{dog.location}</span></div><div className="tags large">{dog.tags.map(tag => <span key={tag}><Check/>{tag}</span>)}</div><p className="lead">{dog.bio}</p><p>{dog.longBio}</p><div className="profile-actions"><button className="button primary" type="button" onClick={() => setContactOpen(true)}><Send/> {text.askAbout} {dog.name}</button><button className="button outline" onClick={share}><Share2/> {text.shareProfile}</button></div><div className="share-row" aria-label={`${text.shareOn} ${dog.name}`}><span>{text.shareOn}</span><a href={`https://wa.me/?text=${encodedMessage}`} target="_blank" rel="noreferrer">{text.whatsapp}</a><a href={`https://t.me/share/url?url=${encodeURIComponent(profileUrl)}&text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">Telegram</a><a href={`sms:?body=${encodedMessage}`}>{text.messages}</a><a href={`mailto:?subject=${encodedSubject}&body=${encodedMessage}`}>{text.email}</a></div></div>
     </div>
     {dog.photos.length > 1 && <section className="profile-gallery" aria-label={`${dog.name} photo gallery`}>
       {dog.photos.slice(1).map((photo, index) => <button className="gallery-thumb" key={photo.filename} type="button" onClick={() => setViewerIndex(index + 1)} aria-label={`${text.openPhoto}: ${dog.name}`}>
@@ -540,7 +581,7 @@ function DogProfile({ lang, setLang, text, dogs }) {
       </div>
     </div>}
     <section className="profile-next"><Heart/><div><h2>{text.profileNextTitle(dog.name)}</h2><p>{text.profileNextText}</p></div><a className="button outline" href="/#process">{text.seeProcess}</a></section>
-  </main><Footer text={text}/></>
+  </main><Footer text={text}/>{contactOpen && <ContactModal text={text} onClose={() => setContactOpen(false)}/>}</>
 }
 
 function NotFound({ text }) {

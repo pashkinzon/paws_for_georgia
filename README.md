@@ -11,9 +11,9 @@ npm install
 npm run dev
 ```
 
-## Connect Google Forms
+## Contact flow
 
-Copy `.env.example` to `.env`, then replace the form URL and `entry.*` values with those from your Google Form. The signup form posts directly to the Google Forms `formResponse` endpoint.
+The site routes adoption and support questions to Pavel Polishchuk via Telegram, WhatsApp, or email. Pavel does not accept adoption money or donations directly; he connects adopters and supporters with the volunteers in Georgia.
 
 ## Build
 
