@@ -83,6 +83,14 @@ const siteText = {
     profileEyebrow: 'Looking for a home',
     askAbout: 'Ask about',
     shareProfile: 'Share profile',
+    shareOn: 'Share on',
+    whatsapp: 'WhatsApp',
+    messages: 'Messages',
+    email: 'Email',
+    openPhoto: 'Open photo',
+    previousPhoto: 'Previous photo',
+    nextPhoto: 'Next photo',
+    closeViewer: 'Close viewer',
     linkCopied: 'Profile link copied!',
     profileNextTitle: name => `Could ${name} be your new best friend?`,
     profileNextText: 'Adoption has no fee. Our volunteers will guide you through every step.',
@@ -140,6 +148,14 @@ const siteText = {
     profileEyebrow: 'Sucht ein Zuhause',
     askAbout: 'Fragen zu',
     shareProfile: 'Profil teilen',
+    shareOn: 'Teilen über',
+    whatsapp: 'WhatsApp',
+    messages: 'Nachrichten',
+    email: 'E-Mail',
+    openPhoto: 'Foto öffnen',
+    previousPhoto: 'Vorheriges Foto',
+    nextPhoto: 'Nächstes Foto',
+    closeViewer: 'Ansicht schließen',
     linkCopied: 'Profil-Link kopiert!',
     profileNextTitle: name => `Könnte ${name} dein neuer bester Freund sein?`,
     profileNextText: 'Die Adoption hat keine Gebühr. Unsere Freiwilligen begleiten dich Schritt für Schritt.',
@@ -197,6 +213,14 @@ const siteText = {
     profileEyebrow: 'Ищет дом',
     askAbout: 'Спросить про',
     shareProfile: 'Поделиться анкетой',
+    shareOn: 'Поделиться через',
+    whatsapp: 'WhatsApp',
+    messages: 'Сообщения',
+    email: 'E-mail',
+    openPhoto: 'Открыть фото',
+    previousPhoto: 'Предыдущее фото',
+    nextPhoto: 'Следующее фото',
+    closeViewer: 'Закрыть просмотр',
     linkCopied: 'Ссылка на анкету скопирована!',
     profileNextTitle: name => `${name} может стать вашим новым лучшим другом?`,
     profileNextText: 'Усыновление без платы. Наши волонтёры помогут на каждом шаге.',
@@ -215,7 +239,7 @@ const dogData = [
     en: {
       age: '2 months',
       sex: 'Female',
-      location: 'Georgia',
+      location: 'Batumi, Georgia',
       tags: ['Vaccinated', 'Parasite treated', 'Puppy'],
       bio: 'A bright, playful baby with a mischievous spark and a big-dog future ahead of her.',
       longBio: 'Vesta was born on April 30 and has just turned two months old. She has already been treated against parasites and received her first vaccination; the remaining puppy vaccinations will follow on schedule. Like every happy youngster, she is cheerful, curious, playful, and wonderfully full of energy. Vesta is expected to grow into a large dog, as her mother is big and her father was likely large as well. There is even a chance her father was a Deutsch Drahthaar, judging by her expressive little face.'
@@ -223,7 +247,7 @@ const dogData = [
     de: {
       age: '2 Monate',
       sex: 'Hündin',
-      location: 'Georgien',
+      location: 'Batumi, Georgien',
       tags: ['Geimpft', 'Entwurmt & behandelt', 'Welpe'],
       bio: 'Ein fröhliches, verspieltes Hundekind mit frechem Blick und der Aussicht, einmal groß zu werden.',
       longBio: 'Vesta wurde am 30. April geboren und ist nun zwei Monate alt. Sie wurde bereits gegen Parasiten behandelt und hat ihre erste Impfung erhalten; die weiteren Welpenimpfungen folgen planmäßig. Wie alle glücklichen Hundekinder ist sie fröhlich, neugierig, verspielt und voller Energie. Vesta wird voraussichtlich eine große Hündin, denn ihre Mutter ist groß und auch ihr Vater war vermutlich groß. Ihrem ausdrucksstarken Gesicht nach könnte ihr Vater sogar ein Deutsch Drahthaar gewesen sein.'
@@ -231,7 +255,7 @@ const dogData = [
     ru: {
       age: '2 месяца',
       sex: 'Девочка',
-      location: 'Грузия',
+      location: 'Батуми, Грузия',
       tags: ['Вакцинирована', 'Обработана от паразитов', 'Щенок'],
       bio: 'Яркая, игривая малышка с озорным характером и будущим большой собаки.',
       longBio: 'Веста родилась 30 апреля, ей уже два месяца. Она обработана от паразитов и получила первую вакцину; остальные прививки будут сделаны по сроку. Как все малыши, она весёлая, любопытная, игривая и полная энергии. Во взрослом возрасте Веста, скорее всего, будет крупной собакой: её мама большая, и папа, вероятно, тоже был крупным. Есть шанс, что папа был породы дратхаар — уж очень Веста похожа мордочкой.'
@@ -244,7 +268,7 @@ const dogData = [
     en: {
       age: 'About 5 years',
       sex: 'Female',
-      location: 'Georgia',
+      location: 'Batumi, Georgia',
       tags: ['Gentle', 'Loving', 'Good guardian'],
       bio: 'A tender, devoted girl who became a protective foster mother to tiny puppies.',
       longBio: 'Puri is simply wonderful: kind, soft, affectionate, and deeply caring. She appeared near the little puppies in February, when they were still very small, and immediately began to watch over them as if they were her own. She is often by their side, guarding and comforting them, though she also enjoys her independent walks along the boulevard. Puri has the calm, generous heart of a true family dog.'
@@ -252,7 +276,7 @@ const dogData = [
     de: {
       age: 'Etwa 5 Jahre',
       sex: 'Hündin',
-      location: 'Georgien',
+      location: 'Batumi, Georgien',
       tags: ['Sanft', 'Liebevoll', 'Beschützend'],
       bio: 'Eine zarte, treue Hündin, die für kleine Welpen zur liebevollen Pflegemama wurde.',
       longBio: 'Puri ist einfach wunderbar: freundlich, weich, zärtlich und sehr fürsorglich. Im Februar kam sie zu den kleinen Welpen, als sie noch winzig waren, und begann sofort, auf sie aufzupassen, als wären es ihre eigenen. Sie ist oft an ihrer Seite, beschützt und beruhigt sie, genießt aber auch ihre eigenen Spaziergänge am Boulevard. Puri hat das ruhige, großzügige Herz einer echten Familienhündin.'
@@ -260,7 +284,7 @@ const dogData = [
     ru: {
       age: 'Примерно 5 лет',
       sex: 'Девочка',
-      location: 'Грузия',
+      location: 'Батуми, Грузия',
       tags: ['Нежная', 'Ласковая', 'Заботливая'],
       bio: 'Очень добрая и преданная девочка, которая стала приёмной мамой для маленьких щенков.',
       longBio: 'Пури просто чудесная: добрая, нежная, ласковая и очень заботливая. Она пришла к малышам в феврале, когда они были ещё совсем крошками, и сразу начала охранять и оберегать их, будто они её собственные. Чаще всего она рядом с ними, но при этом любит и свои прогулки по бульвару. У Пури спокойное, большое сердце настоящей семейной собаки.'
@@ -273,7 +297,7 @@ const dogData = [
     en: {
       age: '8-8.5 months',
       sex: 'Female',
-      location: 'Georgia',
+      location: 'Batumi, Georgia',
       tags: ['Vaccinated', 'Sterilized', 'Parasite treated'],
       bio: 'A sociable, active young girl who loves people and gets along well with other animals.',
       longBio: 'Odi appeared in early January together with Billie, when they looked about two months old. She is healthy, treated regularly against parasites and worms, vaccinated in puppyhood, and her next vaccination is due at one year of age. Odi has also recently been sterilized. She is the more outgoing and energetic of the two: lively, brave, very friendly, and loyal. She is strongly people-oriented, does well with other animals, and currently weighs around 20-22 kg.'
@@ -281,7 +305,7 @@ const dogData = [
     de: {
       age: '8-8,5 Monate',
       sex: 'Hündin',
-      location: 'Georgien',
+      location: 'Batumi, Georgien',
       tags: ['Geimpft', 'Sterilisiert', 'Entwurmt & behandelt'],
       bio: 'Eine offene, aktive junge Hündin, die Menschen liebt und gut mit anderen Tieren auskommt.',
       longBio: 'Odi tauchte Anfang Januar zusammen mit Billie auf; damals wirkten die beiden etwa zwei Monate alt. Sie ist gesund, wird regelmäßig gegen Parasiten und Würmer behandelt, wurde als Welpe geimpft und ihre nächste Impfung ist mit einem Jahr fällig. Odi wurde vor Kurzem sterilisiert. Sie ist die kontaktfreudigere und aktivere der beiden: lebhaft, mutig, sehr freundlich und treu. Sie orientiert sich stark am Menschen, kommt gut mit anderen Tieren zurecht und wiegt aktuell etwa 20-22 kg.'
@@ -289,7 +313,7 @@ const dogData = [
     ru: {
       age: '8-8,5 месяцев',
       sex: 'Девочка',
-      location: 'Грузия',
+      location: 'Батуми, Грузия',
       tags: ['Вакцинирована', 'Стерилизована', 'Обработана от паразитов'],
       bio: 'Общительная и активная молодая девочка, которая любит людей и хорошо ладит с другими животными.',
       longBio: 'Оди появилась в первых числах января вместе с Билли; на вид им тогда было около двух месяцев. Она здорова, регулярно обрабатывается от паразитов и глистов, была привита в детском возрасте, следующая вакцинация нужна в 1 год. Недавно Оди стерилизовали. По характеру она более компанейская и активная: живая, смелая, очень добрая и верная. Она сильно ориентирована на человека, хорошо ладит с другими животными и сейчас весит примерно 20-22 кг.'
@@ -302,7 +326,7 @@ const dogData = [
     en: {
       age: '8-8.5 months',
       sex: 'Female',
-      location: 'Georgia',
+      location: 'Batumi, Georgia',
       tags: ['Vaccinated', 'Sterilized', 'Parasite treated'],
       bio: 'A shy, gentle young girl with a tender heart and a calmer way of meeting the world.',
       longBio: 'Billie appeared in early January together with Odi, when they looked about two months old. She is healthy, treated regularly against parasites and worms, vaccinated in puppyhood, and her next vaccination is due at one year of age. Billie has also recently been sterilized. She is more modest, shy, and calm than Odi, though she can be a little talkative when she wants to be heard. Billie is very affectionate and delicate. She weighs around 14-15 kg and has an issue with one back leg, most likely connected to a joint problem from early puppyhood. It does not stop her from enjoying life, but she does limp.'
@@ -310,7 +334,7 @@ const dogData = [
     de: {
       age: '8-8,5 Monate',
       sex: 'Hündin',
-      location: 'Georgien',
+      location: 'Batumi, Georgien',
       tags: ['Geimpft', 'Sterilisiert', 'Entwurmt & behandelt'],
       bio: 'Eine schüchterne, sanfte junge Hündin mit zartem Herzen und ruhiger Art.',
       longBio: 'Billie tauchte Anfang Januar zusammen mit Odi auf; damals wirkten die beiden etwa zwei Monate alt. Sie ist gesund, wird regelmäßig gegen Parasiten und Würmer behandelt, wurde als Welpe geimpft und ihre nächste Impfung ist mit einem Jahr fällig. Billie wurde vor Kurzem sterilisiert. Sie ist zurückhaltender, schüchterner und ruhiger als Odi, kann aber auch ein wenig gesprächig sein, wenn sie gehört werden möchte. Billie ist sehr verschmust und feinfühlig. Sie wiegt etwa 14-15 kg und hat ein Problem mit einem Hinterbein, vermutlich seit früher Welpenzeit am Gelenk. Es hält sie nicht davon ab, ihr Leben zu genießen, aber sie humpelt.'
@@ -318,7 +342,7 @@ const dogData = [
     ru: {
       age: '8-8,5 месяцев',
       sex: 'Девочка',
-      location: 'Грузия',
+      location: 'Батуми, Грузия',
       tags: ['Вакцинирована', 'Стерилизована', 'Обработана от паразитов'],
       bio: 'Скромная и нежная молодая девочка с мягким сердцем и спокойным характером.',
       longBio: 'Билли появилась в первых числах января вместе с Оди; на вид им тогда было около двух месяцев. Она здорова, регулярно обрабатывается от паразитов и глистов, была привита в детском возрасте, следующая вакцинация нужна в 1 год. Недавно Билли стерилизовали. Она более стеснительная, скромная и спокойная, чем Оди, но при этом может быть довольно гавкучей, когда хочет, чтобы её услышали. Билли очень ласковая и нежная. Она весит примерно 14-15 кг. Есть проблема с задней лапкой, скорее всего с суставом с детства. Это не мешает ей радоваться жизни, но она хромает.'
@@ -334,6 +358,10 @@ function localizeDog(dog, lang) {
 
 function dogProfileUrl(slug) {
   return new URL(`/dogs/${slug}`, window.location.origin).toString()
+}
+
+function shareMessage(dog, text) {
+  return `${text.meet} ${dog.name} — Paws from Georgia`
 }
 
 function Logo({ text }) {
@@ -461,23 +489,56 @@ function HomePage({ lang, setLang, text, dogs }) {
 function DogProfile({ lang, setLang, text, dogs }) {
   const { pathname } = useLocation()
   const dog = dogs.find(item => pathname.endsWith(item.slug))
+  const photoCount = dog?.photos.length || 0
+  const [viewerIndex, setViewerIndex] = useState(null)
   useEffect(() => window.scrollTo(0, 0), [pathname])
+  useEffect(() => {
+    if (viewerIndex === null || photoCount === 0) return undefined
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setViewerIndex(null)
+      if (event.key === 'ArrowLeft') setViewerIndex(index => (index + photoCount - 1) % photoCount)
+      if (event.key === 'ArrowRight') setViewerIndex(index => (index + 1) % photoCount)
+    }
+    document.body.classList.add('viewer-open')
+    window.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.body.classList.remove('viewer-open')
+      window.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [photoCount, viewerIndex])
   if (!dog) return <NotFound text={text} />
+  const profileUrl = dogProfileUrl(dog.slug)
+  const message = shareMessage(dog, text)
+  const encodedMessage = encodeURIComponent(`${message}\n${profileUrl}`)
+  const encodedSubject = encodeURIComponent(`${dog.name} — Paws from Georgia`)
   const share = async () => {
-    const url = dogProfileUrl(dog.slug)
-    const data = { title: `${dog.name} — Paws from Georgia`, text: `${text.meet} ${dog.name}`, url }
+    const data = { title: `${dog.name} — Paws from Georgia`, text: message, url: profileUrl }
     if (navigator.share) await navigator.share(data)
-    else { await navigator.clipboard.writeText(url); alert(text.linkCopied) }
+    else { await navigator.clipboard.writeText(profileUrl); alert(text.linkCopied) }
   }
   return <><Header lang={lang} setLang={setLang} text={text}/><main className="profile-page">
     <Link className="back-link" to="/#dogs"><ArrowLeft/> {text.backToDogs}</Link>
     <div className="profile-layout">
-      <div className="profile-image"><img src={dog.photos[0].src} alt={dog.name}/><span><ShieldCheck/> {text.ready}</span></div>
-      <div className="profile-copy"><span className="eyebrow"><PawPrint/> {text.profileEyebrow}</span><h1>{dog.name}</h1><div className="profile-meta"><span>{dog.age}</span><i/><span>{dog.sex}</span><i/><span><MapPin/>{dog.location}</span></div><div className="tags large">{dog.tags.map(tag => <span key={tag}><Check/>{tag}</span>)}</div><p className="lead">{dog.bio}</p><p>{dog.longBio}</p><div className="profile-actions"><a className="button primary" href={`${telegramUrl}?text=${encodeURIComponent(`Hi! I would love to learn more about ${dog.name}.`)}`} target="_blank" rel="noreferrer"><Send/> {text.askAbout} {dog.name}</a><button className="button outline" onClick={share}><Share2/> {text.shareProfile}</button></div></div>
+      <button className="profile-image image-button" type="button" onClick={() => setViewerIndex(0)} aria-label={`${text.openPhoto}: ${dog.name}`}>
+        <img src={dog.photos[0].src} alt={dog.name}/><span><ShieldCheck/> {text.ready}</span>
+      </button>
+      <div className="profile-copy"><span className="eyebrow"><PawPrint/> {text.profileEyebrow}</span><h1>{dog.name}</h1><div className="profile-meta"><span>{dog.age}</span><i/><span>{dog.sex}</span><i/><span><MapPin/>{dog.location}</span></div><div className="tags large">{dog.tags.map(tag => <span key={tag}><Check/>{tag}</span>)}</div><p className="lead">{dog.bio}</p><p>{dog.longBio}</p><div className="profile-actions"><a className="button primary" href={`${telegramUrl}?text=${encodeURIComponent(`Hi! I would love to learn more about ${dog.name}.`)}`} target="_blank" rel="noreferrer"><Send/> {text.askAbout} {dog.name}</a><button className="button outline" onClick={share}><Share2/> {text.shareProfile}</button></div><div className="share-row" aria-label={`${text.shareOn} ${dog.name}`}><span>{text.shareOn}</span><a href={`https://wa.me/?text=${encodedMessage}`} target="_blank" rel="noreferrer">{text.whatsapp}</a><a href={`https://t.me/share/url?url=${encodeURIComponent(profileUrl)}&text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">Telegram</a><a href={`sms:?body=${encodedMessage}`}>{text.messages}</a><a href={`mailto:?subject=${encodedSubject}&body=${encodedMessage}`}>{text.email}</a></div></div>
     </div>
     {dog.photos.length > 1 && <section className="profile-gallery" aria-label={`${dog.name} photo gallery`}>
-      {dog.photos.slice(1).map(photo => <img key={photo.filename} src={photo.src} alt={`${dog.name} ${photo.filename}`} />)}
+      {dog.photos.slice(1).map((photo, index) => <button className="gallery-thumb" key={photo.filename} type="button" onClick={() => setViewerIndex(index + 1)} aria-label={`${text.openPhoto}: ${dog.name}`}>
+        <img src={photo.src} alt={`${dog.name} ${photo.filename}`} />
+      </button>)}
     </section>}
+    {viewerIndex !== null && <div className="image-viewer" role="dialog" aria-modal="true" aria-label={`${dog.name} photo viewer`}>
+      <button className="viewer-backdrop" type="button" onClick={() => setViewerIndex(null)} aria-label={text.closeViewer} />
+      <div className="viewer-panel">
+        <button className="viewer-close" type="button" onClick={() => setViewerIndex(null)} aria-label={text.closeViewer}><X/></button>
+        {dog.photos.length > 1 && <button className="viewer-nav prev" type="button" onClick={() => setViewerIndex((viewerIndex + dog.photos.length - 1) % dog.photos.length)} aria-label={text.previousPhoto}><ArrowLeft/></button>}
+        <img src={dog.photos[viewerIndex].src} alt={`${dog.name} ${viewerIndex + 1}`} />
+        {dog.photos.length > 1 && <button className="viewer-nav next" type="button" onClick={() => setViewerIndex((viewerIndex + 1) % dog.photos.length)} aria-label={text.nextPhoto}><ArrowRight/></button>}
+        <small>{viewerIndex + 1} / {dog.photos.length}</small>
+      </div>
+    </div>}
     <section className="profile-next"><Heart/><div><h2>{text.profileNextTitle(dog.name)}</h2><p>{text.profileNextText}</p></div><a className="button outline" href="/#process">{text.seeProcess}</a></section>
   </main><Footer text={text}/></>
 }
