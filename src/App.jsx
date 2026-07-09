@@ -332,6 +332,10 @@ function localizeDog(dog, lang) {
   return { ...dog, ...(dog[lang] || dog.en) }
 }
 
+function dogProfileUrl(slug) {
+  return new URL(`/dogs/${slug}`, window.location.origin).toString()
+}
+
 function Logo({ text }) {
   return <Link className="logo" to="/" aria-label="Paws from Georgia home">
     <span className="logo-mark"><Heart /><PawPrint /></span>
@@ -460,9 +464,10 @@ function DogProfile({ lang, setLang, text, dogs }) {
   useEffect(() => window.scrollTo(0, 0), [pathname])
   if (!dog) return <NotFound text={text} />
   const share = async () => {
-    const data = { title: `${dog.name} — Paws from Georgia`, text: `${text.meet} ${dog.name}`, url: window.location.href }
+    const url = dogProfileUrl(dog.slug)
+    const data = { title: `${dog.name} — Paws from Georgia`, text: `${text.meet} ${dog.name}`, url }
     if (navigator.share) await navigator.share(data)
-    else { await navigator.clipboard.writeText(window.location.href); alert(text.linkCopied) }
+    else { await navigator.clipboard.writeText(url); alert(text.linkCopied) }
   }
   return <><Header lang={lang} setLang={setLang} text={text}/><main className="profile-page">
     <Link className="back-link" to="/#dogs"><ArrowLeft/> {text.backToDogs}</Link>
