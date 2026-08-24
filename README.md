@@ -1,6 +1,6 @@
 # Paws from Georgia
 
-A responsive React/Vite website for volunteer dog rescue, with shareable dog profile pages for Vesta, Puri, Odi, and Billie.
+A responsive React/Vite website for volunteer dog rescue, with shareable dog profile pages for Bublik, Vesta, Puri, Odi, and Billie.
 
 The site defaults to English and includes a visible language toggle for English, German, and Russian.
 
@@ -40,4 +40,4 @@ Destination: /index.html
 Action: Rewrite
 ```
 
-Dog profiles are available at `/dogs/vesta`, `/dogs/puri`, `/dogs/odi`, and `/dogs/billie`.
+Dog profiles are available at `/dogs/bublik`, `/dogs/vesta`, `/dogs/puri`, `/dogs/odi`, and `/dogs/billie`.
