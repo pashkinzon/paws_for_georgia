@@ -74,3 +74,9 @@ body.viewer-open{overflow:hidden}
 
 @media(max-width:900px){.volunteer-section{grid-template-columns:1fr}.volunteer-copy,.help-direct{padding:24px}.contact-options .button{flex:1 1 220px}.viewer-panel{width:calc(100vw - 92px);max-height:calc(100svh - 132px)}.viewer-panel img{max-height:calc(100svh - 132px)}}
 @media(max-width:600px){.volunteer-section{padding-top:18px}.volunteer-copy,.help-direct{padding:21px 18px}.volunteer-copy h2,.help-direct h3{font-size:25px}.contact-modal{padding:14px}.contact-panel{max-height:calc(100svh - 28px);padding:26px 18px}.contact-panel h2{font-size:26px}.contact-options .button{width:100%;flex-basis:100%}.viewer-panel{width:calc(100vw - 24px);max-height:calc(100svh - 120px)}.viewer-panel img{max-height:calc(100svh - 120px);border-radius:12px}.viewer-panel small{bottom:-6px}.viewer-close{top:8px;right:8px;background:#fffdf8ee}.viewer-nav{background:#fffdf8ee}.profile-next{padding:22px 18px}}
+
+/* Keep the expanded dog list balanced across desktop, tablet, and mobile. */
+.dog-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1180px){.dog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:900px){.dog-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.dog-grid{display:flex}}

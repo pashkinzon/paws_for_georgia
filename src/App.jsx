@@ -63,7 +63,7 @@ const siteText = {
     ],
     noFee: <>No adoption fee.<br/>Just love.</>,
     dogsTitle: 'Dogs Looking for a Home',
-    waiting: '4 waiting for love',
+    waiting: '5 waiting for love',
     meet: 'Meet',
     contactTitle: 'Have a Question or Want to Adopt?',
     contactText: 'You will reach Pavel Polishchuk, the volunteer who created this website and connects interested adopters with the volunteers in Georgia.',
@@ -131,7 +131,7 @@ const siteText = {
     ],
     noFee: <>Keine Schutzgebühr.<br/>Nur Liebe.</>,
     dogsTitle: 'Hunde suchen ein Zuhause',
-    waiting: '4 warten auf Liebe',
+    waiting: '5 warten auf Liebe',
     meet: 'Lerne',
     contactTitle: 'Fragen oder Interesse an einer Adoption?',
     contactText: 'Du erreichst Pavel Polishchuk, den Freiwilligen, der diese Website erstellt hat und Interessenten mit den Freiwilligen in Georgien verbindet.',
@@ -199,7 +199,7 @@ const siteText = {
     ],
     noFee: <>Без платы за усыновление.<br/>Только любовь.</>,
     dogsTitle: 'Собаки ищут дом',
-    waiting: '4 ждут любви',
+    waiting: '5 ждут любви',
     meet: 'Познакомиться:',
     contactTitle: 'Есть вопросы или хотите забрать собаку?',
     contactText: 'Вы напишете Павлу Полищуку, волонтёру, который создал этот сайт и связывает заинтересованных людей с волонтёрами в Грузии.',
@@ -243,6 +243,35 @@ const siteText = {
 }
 
 const dogData = [
+  {
+    slug: 'bublik',
+    name: 'Bublik',
+    photos: dogPhotos('dog-bublik', 'bublik-1.jpeg'),
+    en: {
+      age: 'About 3 years',
+      sex: 'Male',
+      location: 'Tbilisi, Georgia',
+      tags: ['Affectionate', 'Active', 'Cheerful'],
+      bio: 'A joyful, affectionate survivor whose bright eyes are still full of trust, curiosity, and hope.',
+      longBio: 'Bublik was found beside a road near Tbilisi in a critical condition, with his tail torn off and one leg badly injured. Caring people and volunteers rushed him to a veterinary clinic, where he received the surgeries and treatment he urgently needed. Today he is recovering well and getting ready for the most important chapter of all: meeting his forever family. Despite everything he has endured, Bublik has kept his extraordinary love and trust in people. He is active, affectionate, kind, and wonderfully cheerful; after his rescue, he needed almost no time to open his heart again. He greets each new day with curiosity and joy, and his eyes are unmistakably full of life and hope. Bublik can be adopted within Georgia or internationally. Let’s help this incredible boy find the safe, loving home he deserves.'
+    },
+    de: {
+      age: 'Etwa 3 Jahre',
+      sex: 'Rüde',
+      location: 'Tiflis, Georgien',
+      tags: ['Verschmust', 'Aktiv', 'Lebensfroh'],
+      bio: 'Ein lebensfroher, liebevoller Kämpfer, dessen strahlende Augen noch immer voller Vertrauen, Neugier und Hoffnung sind.',
+      longBio: 'Bublik wurde schwer verletzt am Straßenrand nahe Tiflis gefunden: Sein Schwanz war abgerissen und eines seiner Beine stark verletzt. Tierliebe Menschen und Freiwillige brachten ihn sofort in eine Tierklinik, wo er die dringend nötigen Operationen und Behandlungen erhielt. Heute erholt er sich gut und bereitet sich auf das wichtigste Kapitel seines Lebens vor: seine Familie für immer kennenzulernen. Trotz allem, was er durchstehen musste, hat Bublik seine außergewöhnliche Liebe zu den Menschen und sein Vertrauen in sie bewahrt. Er ist aktiv, verschmust, freundlich und wunderbar fröhlich; nach seiner Rettung brauchte er kaum Zeit, um sein Herz wieder zu öffnen. Jeden neuen Tag begrüßt er mit Neugier und Freude, und seine Augen sind unverkennbar voller Leben und Hoffnung. Bublik kann innerhalb Georgiens oder international adoptiert werden. Helfen wir diesem großartigen Jungen, das sichere und liebevolle Zuhause zu finden, das er verdient.'
+    },
+    ru: {
+      age: 'Около 3 лет',
+      sex: 'Мальчик',
+      location: 'Тбилиси, Грузия',
+      tags: ['Ласковый', 'Активный', 'Жизнерадостный'],
+      bio: 'Жизнерадостный и ласковый пёс с удивительной судьбой, чьи глаза по-прежнему полны доверия, любопытства и надежды.',
+      longBio: 'Бублика нашли в тяжёлом состоянии на обочине дороги недалеко от Тбилиси: у него был оторван хвост и серьёзно травмирована одна лапа. Неравнодушные люди и волонтёры срочно отвезли его в ветеринарную клинику, где он получил необходимые операции и лечение. Сейчас Бублик хорошо восстанавливается и готовится к самому важному этапу — встрече со своей семьёй. Несмотря на всё пережитое, он сохранил удивительную любовь и доверие к людям. Бублик активный, ласковый, добрый и невероятно жизнерадостный; после спасения ему почти не понадобилось времени, чтобы снова открыть сердце человеку. Каждый новый день он встречает с любопытством и радостью, а его глаза по-настоящему полны жизни и надежды. Бублика можно усыновить как в Грузии, так и в другой стране. Давайте поможем этому замечательному мальчику найти безопасный и любящий дом, которого он заслуживает.'
+    },
+  },
   {
     slug: 'vesta',
     name: 'Vesta',
@@ -532,7 +561,9 @@ function DogProfile({ lang, setLang, text, dogs }) {
   const photoCount = dog?.photos.length || 0
   const [viewerIndex, setViewerIndex] = useState(null)
   const [contactOpen, setContactOpen] = useState(false)
-  useEffect(() => window.scrollTo(0, 0), [pathname])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
   useEffect(() => {
     if (viewerIndex === null || photoCount === 0) return undefined
     const closeOnEscape = (event) => {
