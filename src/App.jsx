@@ -63,7 +63,7 @@ const siteText = {
     ],
     noFee: <>No adoption fee.<br/>Just love.</>,
     dogsTitle: 'Dogs Looking for a Home',
-    waiting: '4 waiting for love',
+    waiting: '5 waiting for love',
     meet: 'Meet',
     homeFound: 'Home found',
     journeyToThailand: 'From Georgia to Thailand',
@@ -136,7 +136,7 @@ const siteText = {
     ],
     noFee: <>Keine Schutzgebühr.<br/>Nur Liebe.</>,
     dogsTitle: 'Hunde suchen ein Zuhause',
-    waiting: '4 warten auf Liebe',
+    waiting: '5 warten auf Liebe',
     meet: 'Lerne',
     homeFound: 'Zuhause gefunden',
     journeyToThailand: 'Von Georgien nach Thailand',
@@ -209,7 +209,7 @@ const siteText = {
     ],
     noFee: <>Без платы за усыновление.<br/>Только любовь.</>,
     dogsTitle: 'Собаки ищут дом',
-    waiting: '4 ждут любви',
+    waiting: '5 ждут любви',
     meet: 'Познакомиться:',
     homeFound: 'Дом найден',
     journeyToThailand: 'Из Грузии в Таиланд',
@@ -315,6 +315,36 @@ const dogData = [
       tags: ['Вакцинирована', 'Обработана от паразитов', 'Щенок'],
       bio: 'Яркая, игривая малышка с озорным характером и будущим большой собаки.',
       longBio: 'Веста родилась 30 апреля, ей уже два месяца. Она обработана от паразитов и получила первую вакцину; остальные прививки будут сделаны по сроку. Как все малыши, она весёлая, любопытная, игривая и полная энергии. Во взрослом возрасте Веста, скорее всего, будет крупной собакой: её мама большая, и папа, вероятно, тоже был крупным. Есть шанс, что папа был породы дратхаар — уж очень Веста похожа мордочкой. Прекрасная новость: Веста нашла свою семью и отправляется из Грузии в новый дом в Таиланде.'
+    },
+  },
+  {
+    slug: 'marta',
+    name: 'Marta',
+    photos: dogPhotos('dog-marta', 'marta-1.jpeg'),
+    en: {
+      age: 'About 10–12 months',
+      sex: 'Female',
+      location: 'Batumi, Georgia',
+      tags: ['Sterilized', 'Vaccinated & chipped', 'House-trained'],
+      bio: 'A kind, calm and clever young Labrador mix who is gentle at home and playful outdoors.',
+      longBio: 'Marta is a Labrador mix, about 10–12 months old and around 29 kg. She is sterilized, microchipped, vaccinated against common infections and rabies, and house-trained. A veterinarian examined her and found her healthy, active, and feeling well. An inflammation that developed after sterilization was treated successfully with antibiotics. At home Marta is calm, tidy, and easy to live with. She is affectionate with people, friendly with dogs and cats, and calmly lets her paws be washed. Outdoors she becomes more active and enjoys walks and play. Marta was found on the streets of Batumi after a municipal clinic had sterilized, microchipped, and released her. When the surgical wound became inflamed, a volunteer took her home and arranged treatment. Marta has recovered well, but the volunteer cannot foster her permanently, so she is looking for a stable home. If the right family is found in Europe, the volunteers can help organize the required documents and relocation process.'
+    },
+    de: {
+      age: 'Etwa 10–12 Monate',
+      sex: 'Hündin',
+      location: 'Batumi, Georgien',
+      tags: ['Sterilisiert', 'Geimpft & gechippt', 'Stubenrein'],
+      bio: 'Eine liebe, ruhige und kluge junge Labrador-Mix-Hündin, die zu Hause entspannt und draußen verspielt ist.',
+      longBio: 'Marta ist ein Labrador-Mix, etwa 10–12 Monate alt und wiegt rund 29 kg. Sie ist sterilisiert, gechippt, gegen die wichtigsten Infektionskrankheiten sowie Tollwut geimpft und stubenrein. Eine tierärztliche Untersuchung ergab, dass sie gesund, aktiv und in guter Verfassung ist. Eine Entzündung nach der Sterilisation wurde erfolgreich mit Antibiotika behandelt. In der Wohnung ist Marta ruhig, sauber und angenehm im Zusammenleben. Sie begegnet Menschen sehr freundlich, versteht sich gut mit anderen Hunden und Katzen und lässt sich gelassen die Pfoten waschen. Draußen ist sie aktiver und liebt Spaziergänge und gemeinsames Spielen. Marta wurde in Batumi auf der Straße gefunden, nachdem eine städtische Klinik sie sterilisiert, gechippt und wieder freigelassen hatte. Als sich die Operationswunde entzündete, nahm eine Freiwillige sie auf und organisierte die Behandlung. Marta hat sich gut erholt, kann dort aber nicht dauerhaft bleiben und sucht deshalb ein beständiges Zuhause. Wenn sich eine passende Familie in Europa findet, helfen die Freiwilligen gern bei den nötigen Dokumenten und der Organisation der Ausreise.'
+    },
+    ru: {
+      name: 'Марта',
+      age: 'Примерно 10–12 месяцев',
+      sex: 'Девочка',
+      location: 'Батуми, Грузия',
+      tags: ['Стерилизована', 'Привита и чипирована', 'Приучена к туалету'],
+      bio: 'Очень добрая, спокойная и умная молодая собака: дома аккуратная, а на прогулке активная и игривая.',
+      longBio: 'Марта — метис лабрадора, ей примерно 10–12 месяцев, вес около 29 кг. Она стерилизована, чипирована, получила комплексную вакцину от основных инфекций и прививку от бешенства, приучена к туалету. Марту осмотрел ветеринар: по внешнему осмотру она здорова, активна и хорошо себя чувствует. Воспаление после стерилизации успешно пролечили курсом антибиотиков. В квартире Марта ведёт себя отлично — она спокойная, аккуратная и умная. Очень хорошо относится к людям, дружелюбна с другими собаками и кошками, спокойно позволяет мыть ей лапы. На улице становится более активной, любит играть и гулять. Марту нашли на улице в Батуми после того, как городская клиника стерилизовала и чипировала её, а затем снова выпустила. Когда послеоперационная рана воспалилась, волонтёр забрала Марту домой и организовала лечение. Сейчас Марта хорошо себя чувствует, но волонтёр не может держать её у себя постоянно, поэтому для неё ищут надёжный постоянный дом. Если подходящая семья найдётся в Европе, волонтёры помогут организовать необходимые документы и процесс переезда.'
     },
   },
   {
