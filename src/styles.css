@@ -80,3 +80,15 @@ body.viewer-open{overflow:hidden}
 @media(max-width:1180px){.dog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:900px){.dog-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.dog-grid{display:flex}}
+
+/* Successful adoption state */
+.dog-card.home-found{border:2px solid var(--olive)}
+.dog-card.home-found .dog-image-link:after,.profile-image.home-found:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#24351a26,#24351a80);pointer-events:none}
+.dog-card.home-found .home-found-overlay{inset:0;display:flex;opacity:1;transform:none;background:transparent;flex-direction:column;align-items:center;justify-content:center;gap:9px;color:#fff;text-align:center;z-index:1}
+.dog-card.home-found .home-found-overlay b{min-width:min(88%,250px);display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 18px;border-radius:999px;background:#fffaf0;color:var(--green);font:900 14px/1.1 'Nunito';box-shadow:0 8px 24px #1b29142b}
+.dog-card.home-found .home-found-overlay b svg{width:17px;height:17px;stroke-width:3}
+.dog-card.home-found .home-found-overlay small{font-size:12px;font-weight:800;text-shadow:0 1px 7px #16210f}
+.dog-card.home-found:hover .home-found-overlay{opacity:1;transform:none}
+.profile-image.home-found span{z-index:1;background:#fffaf0;color:var(--green)}
+.profile-image.home-found span svg{stroke-width:3}
+.profile-next.home-found{border-color:#829650;background:linear-gradient(110deg,#f2f5e7,#fff9ed)}

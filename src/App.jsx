@@ -63,8 +63,12 @@ const siteText = {
     ],
     noFee: <>No adoption fee.<br/>Just love.</>,
     dogsTitle: 'Dogs Looking for a Home',
-    waiting: '5 waiting for love',
+    waiting: '4 waiting for love',
     meet: 'Meet',
+    homeFound: 'Home found',
+    journeyToThailand: 'From Georgia to Thailand',
+    foundHomeTitle: name => `${name} has found her home!`,
+    foundHomeText: 'Her next chapter is taking her from Georgia to her family in Thailand.',
     contactTitle: 'Have a Question or Want to Adopt?',
     contactText: 'You will reach Pavel Polishchuk, the volunteer who created this website and connects interested adopters with the volunteers in Georgia.',
     telegram: 'Text Pavel on Telegram',
@@ -131,8 +135,12 @@ const siteText = {
     ],
     noFee: <>Keine Schutzgebühr.<br/>Nur Liebe.</>,
     dogsTitle: 'Hunde suchen ein Zuhause',
-    waiting: '5 warten auf Liebe',
+    waiting: '4 warten auf Liebe',
     meet: 'Lerne',
+    homeFound: 'Zuhause gefunden',
+    journeyToThailand: 'Von Georgien nach Thailand',
+    foundHomeTitle: name => `${name} hat ihr Zuhause gefunden!`,
+    foundHomeText: 'Ihr nächstes Kapitel führt sie von Georgien zu ihrer Familie in Thailand.',
     contactTitle: 'Fragen oder Interesse an einer Adoption?',
     contactText: 'Du erreichst Pavel Polishchuk, den Freiwilligen, der diese Website erstellt hat und Interessenten mit den Freiwilligen in Georgien verbindet.',
     telegram: 'Pavel auf Telegram schreiben',
@@ -199,8 +207,12 @@ const siteText = {
     ],
     noFee: <>Без платы за усыновление.<br/>Только любовь.</>,
     dogsTitle: 'Собаки ищут дом',
-    waiting: '5 ждут любви',
+    waiting: '4 ждут любви',
     meet: 'Познакомиться:',
+    homeFound: 'Дом найден',
+    journeyToThailand: 'Из Грузии в Таиланд',
+    foundHomeTitle: name => `${name} нашла свой дом!`,
+    foundHomeText: 'Новая глава её жизни начинается с путешествия из Грузии к семье в Таиланде.',
     contactTitle: 'Есть вопросы или хотите забрать собаку?',
     contactText: 'Вы напишете Павлу Полищуку, волонтёру, который создал этот сайт и связывает заинтересованных людей с волонтёрами в Грузии.',
     telegram: 'Написать Павлу в Telegram',
@@ -275,6 +287,7 @@ const dogData = [
   {
     slug: 'vesta',
     name: 'Vesta',
+    status: 'home-found',
     photos: dogPhotos('dog-vesta', 'vesta-1.jpeg'),
     en: {
       age: '2 months',
@@ -282,7 +295,7 @@ const dogData = [
       location: 'Batumi, Georgia',
       tags: ['Vaccinated', 'Parasite treated', 'Puppy'],
       bio: 'A bright, playful baby with a mischievous spark and a big-dog future ahead of her.',
-      longBio: 'Vesta was born on April 30 and has just turned two months old. She has already been treated against parasites and received her first vaccination; the remaining puppy vaccinations will follow on schedule. Like every happy youngster, she is cheerful, curious, playful, and wonderfully full of energy. Vesta is expected to grow into a large dog, as her mother is big and her father was likely large as well. There is even a chance her father was a Deutsch Drahthaar, judging by her expressive little face.'
+      longBio: 'Vesta was born on April 30 and has just turned two months old. She has already been treated against parasites and received her first vaccination; the remaining puppy vaccinations will follow on schedule. Like every happy youngster, she is cheerful, curious, playful, and wonderfully full of energy. Vesta is expected to grow into a large dog, as her mother is big and her father was likely large as well. There is even a chance her father was a Deutsch Drahthaar, judging by her expressive little face. Wonderful news: Vesta has found her family and is being taken from Georgia to her new home in Thailand.'
     },
     de: {
       age: '2 Monate',
@@ -290,7 +303,7 @@ const dogData = [
       location: 'Batumi, Georgien',
       tags: ['Geimpft', 'Entwurmt & behandelt', 'Welpe'],
       bio: 'Ein fröhliches, verspieltes Hundekind mit frechem Blick und der Aussicht, einmal groß zu werden.',
-      longBio: 'Vesta wurde am 30. April geboren und ist nun zwei Monate alt. Sie wurde bereits gegen Parasiten behandelt und hat ihre erste Impfung erhalten; die weiteren Welpenimpfungen folgen planmäßig. Wie alle glücklichen Hundekinder ist sie fröhlich, neugierig, verspielt und voller Energie. Vesta wird voraussichtlich eine große Hündin, denn ihre Mutter ist groß und auch ihr Vater war vermutlich groß. Ihrem ausdrucksstarken Gesicht nach könnte ihr Vater sogar ein Deutsch Drahthaar gewesen sein.'
+      longBio: 'Vesta wurde am 30. April geboren und ist nun zwei Monate alt. Sie wurde bereits gegen Parasiten behandelt und hat ihre erste Impfung erhalten; die weiteren Welpenimpfungen folgen planmäßig. Wie alle glücklichen Hundekinder ist sie fröhlich, neugierig, verspielt und voller Energie. Vesta wird voraussichtlich eine große Hündin, denn ihre Mutter ist groß und auch ihr Vater war vermutlich groß. Ihrem ausdrucksstarken Gesicht nach könnte ihr Vater sogar ein Deutsch Drahthaar gewesen sein. Wunderbare Neuigkeiten: Vesta hat ihre Familie gefunden und wird von Georgien in ihr neues Zuhause in Thailand gebracht.'
     },
     ru: {
       age: '2 месяца',
@@ -298,7 +311,7 @@ const dogData = [
       location: 'Батуми, Грузия',
       tags: ['Вакцинирована', 'Обработана от паразитов', 'Щенок'],
       bio: 'Яркая, игривая малышка с озорным характером и будущим большой собаки.',
-      longBio: 'Веста родилась 30 апреля, ей уже два месяца. Она обработана от паразитов и получила первую вакцину; остальные прививки будут сделаны по сроку. Как все малыши, она весёлая, любопытная, игривая и полная энергии. Во взрослом возрасте Веста, скорее всего, будет крупной собакой: её мама большая, и папа, вероятно, тоже был крупным. Есть шанс, что папа был породы дратхаар — уж очень Веста похожа мордочкой.'
+      longBio: 'Веста родилась 30 апреля, ей уже два месяца. Она обработана от паразитов и получила первую вакцину; остальные прививки будут сделаны по сроку. Как все малыши, она весёлая, любопытная, игривая и полная энергии. Во взрослом возрасте Веста, скорее всего, будет крупной собакой: её мама большая, и папа, вероятно, тоже был крупным. Есть шанс, что папа был породы дратхаар — уж очень Веста похожа мордочкой. Прекрасная новость: Веста нашла свою семью и отправляется из Грузии в новый дом в Таиланде.'
     },
   },
   {
@@ -504,8 +517,9 @@ function VolunteerSection({ text, openContact }) {
 }
 
 function DogCard({ dog, text }) {
-  return <article className="dog-card">
-    <Link to={`/dogs/${dog.slug}`} className="dog-image-link"><img src={dog.photos[0].src} alt={dog.name}/><span>{text.meet} {dog.name} <ChevronRight/></span></Link>
+  const hasHome = dog.status === 'home-found'
+  return <article className={`dog-card${hasHome ? ' home-found' : ''}`}>
+    <Link to={`/dogs/${dog.slug}`} className="dog-image-link"><img src={dog.photos[0].src} alt={dog.name}/>{hasHome ? <span className="home-found-overlay"><b><Check/> {text.homeFound}</b><small>{text.journeyToThailand}</small></span> : <span>{text.meet} {dog.name} <ChevronRight/></span>}</Link>
     <div className="dog-card-body">
       <h3>{dog.name}</h3><div className="dog-meta"><span>{dog.age}</span><i/> <span>{dog.sex}</span></div>
       <div className="tags">{dog.tags.map(tag => <span key={tag}>{tag}</span>)}</div>
@@ -579,6 +593,7 @@ function DogProfile({ lang, setLang, text, dogs }) {
     }
   }, [photoCount, viewerIndex])
   if (!dog) return <NotFound text={text} />
+  const hasHome = dog.status === 'home-found'
   const profileUrl = dogProfileUrl(dog.slug)
   const message = shareMessage(dog, text)
   const encodedMessage = encodeURIComponent(`${message}\n${profileUrl}`)
@@ -591,10 +606,10 @@ function DogProfile({ lang, setLang, text, dogs }) {
   return <><Header lang={lang} setLang={setLang} text={text} openContact={() => setContactOpen(true)}/><main className="profile-page">
     <Link className="back-link" to="/#dogs"><ArrowLeft/> {text.backToDogs}</Link>
     <div className="profile-layout">
-      <button className="profile-image image-button" type="button" onClick={() => setViewerIndex(0)} aria-label={`${text.openPhoto}: ${dog.name}`}>
-        <img src={dog.photos[0].src} alt={dog.name}/><span><ShieldCheck/> {text.ready}</span>
+      <button className={`profile-image image-button${hasHome ? ' home-found' : ''}`} type="button" onClick={() => setViewerIndex(0)} aria-label={`${text.openPhoto}: ${dog.name}`}>
+        <img src={dog.photos[0].src} alt={dog.name}/><span>{hasHome ? <><Check/> {text.homeFound} · {text.journeyToThailand}</> : <><ShieldCheck/> {text.ready}</>}</span>
       </button>
-      <div className="profile-copy"><span className="eyebrow"><PawPrint/> {text.profileEyebrow}</span><h1>{dog.name}</h1><div className="profile-meta"><span>{dog.age}</span><i/><span>{dog.sex}</span><i/><span><MapPin/>{dog.location}</span></div><div className="tags large">{dog.tags.map(tag => <span key={tag}><Check/>{tag}</span>)}</div><p className="lead">{dog.bio}</p><p>{dog.longBio}</p><div className="profile-actions"><button className="button primary" type="button" onClick={() => setContactOpen(true)}><Send/> {text.askAbout} {dog.name}</button><button className="button outline" onClick={share}><Share2/> {text.shareProfile}</button></div><div className="share-row" aria-label={`${text.shareOn} ${dog.name}`}><span>{text.shareOn}</span><a href={`https://wa.me/?text=${encodedMessage}`} target="_blank" rel="noreferrer">{text.whatsapp}</a><a href={`https://t.me/share/url?url=${encodeURIComponent(profileUrl)}&text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">Telegram</a><a href={`sms:?body=${encodedMessage}`}>{text.messages}</a><a href={`mailto:?subject=${encodedSubject}&body=${encodedMessage}`}>{text.email}</a></div></div>
+      <div className="profile-copy"><span className="eyebrow"><PawPrint/> {hasHome ? text.homeFound : text.profileEyebrow}</span><h1>{dog.name}</h1><div className="profile-meta"><span>{dog.age}</span><i/><span>{dog.sex}</span><i/><span><MapPin/>{dog.location}</span></div><div className="tags large">{dog.tags.map(tag => <span key={tag}><Check/>{tag}</span>)}</div><p className="lead">{dog.bio}</p><p>{dog.longBio}</p><div className="profile-actions">{!hasHome && <button className="button primary" type="button" onClick={() => setContactOpen(true)}><Send/> {text.askAbout} {dog.name}</button>}<button className="button outline" onClick={share}><Share2/> {text.shareProfile}</button></div><div className="share-row" aria-label={`${text.shareOn} ${dog.name}`}><span>{text.shareOn}</span><a href={`https://wa.me/?text=${encodedMessage}`} target="_blank" rel="noreferrer">{text.whatsapp}</a><a href={`https://t.me/share/url?url=${encodeURIComponent(profileUrl)}&text=${encodeURIComponent(message)}`} target="_blank" rel="noreferrer">Telegram</a><a href={`sms:?body=${encodedMessage}`}>{text.messages}</a><a href={`mailto:?subject=${encodedSubject}&body=${encodedMessage}`}>{text.email}</a></div></div>
     </div>
     {dog.photos.length > 1 && <section className="profile-gallery" aria-label={`${dog.name} photo gallery`}>
       {dog.photos.slice(1).map((photo, index) => <button className="gallery-thumb" key={photo.filename} type="button" onClick={() => setViewerIndex(index + 1)} aria-label={`${text.openPhoto}: ${dog.name}`}>
@@ -611,7 +626,7 @@ function DogProfile({ lang, setLang, text, dogs }) {
         <small>{viewerIndex + 1} / {dog.photos.length}</small>
       </div>
     </div>}
-    <section className="profile-next"><Heart/><div><h2>{text.profileNextTitle(dog.name)}</h2><p>{text.profileNextText}</p></div><a className="button outline" href="/#process">{text.seeProcess}</a></section>
+    <section className={`profile-next${hasHome ? ' home-found' : ''}`}><Heart/><div><h2>{hasHome ? text.foundHomeTitle(dog.name) : text.profileNextTitle(dog.name)}</h2><p>{hasHome ? text.foundHomeText : text.profileNextText}</p></div>{!hasHome && <a className="button outline" href="/#process">{text.seeProcess}</a>}</section>
   </main><Footer text={text}/>{contactOpen && <ContactModal text={text} onClose={() => setContactOpen(false)}/>}</>
 }
 
