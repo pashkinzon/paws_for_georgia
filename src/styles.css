@@ -92,3 +92,21 @@ body.viewer-open{overflow:hidden}
 .profile-image.home-found span{z-index:1;background:#fffaf0;color:var(--green)}
 .profile-image.home-found span svg{stroke-width:3}
 .profile-next.home-found{border-color:#829650;background:linear-gradient(110deg,#f2f5e7,#fff9ed)}
+
+/* Expanded adoption call-to-action on dog profiles */
+.profile-adoption-panel{margin-top:35px;border:1.5px solid #829650;border-radius:22px;overflow:hidden;background:linear-gradient(110deg,#fffaf0,#f7f3e8)}
+.profile-adoption-intro{min-height:132px;padding:24px 30px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;border-bottom:1px solid #aeb396}
+.profile-adoption-intro>svg{width:46px;height:46px;color:var(--olive);stroke-width:1.8}
+.profile-adoption-intro h2{font:900 25px/1.15 'Nunito';margin:0 0 4px}
+.profile-adoption-intro p{margin:0;color:var(--muted)}
+.profile-adoption-intro .button{min-width:170px}
+.profile-costs{display:grid;grid-template-columns:1fr 1.35fr 1fr 1fr;min-height:128px;align-items:stretch}
+.profile-cost-item{display:flex;align-items:center;gap:17px;padding:18px 25px;border-right:1px solid #aeb396}
+.profile-cost-item:last-child{border-right:0}
+.profile-cost-item svg{width:45px;height:45px;color:var(--olive);flex-shrink:0;stroke-width:1.8}
+.profile-cost-item b{display:block;font:800 16px/1.2 'Nunito'}
+.profile-cost-item small{display:block;margin-top:5px;font-size:12px;line-height:1.35}
+.profile-cost-item.love-only b{font-size:18px}
+
+@media(max-width:1050px){.profile-costs{grid-template-columns:1fr 1fr}.profile-cost-item{border-bottom:1px solid #aeb396}.profile-cost-item:nth-child(2){border-right:0}.profile-cost-item:nth-child(3),.profile-cost-item:nth-child(4){border-bottom:0}}
+@media(max-width:700px){.profile-adoption-intro{grid-template-columns:auto 1fr;padding:22px 18px}.profile-adoption-intro .button{grid-column:1/-1;width:100%}.profile-adoption-intro h2{font-size:22px}.profile-costs{grid-template-columns:1fr}.profile-cost-item{min-height:98px;padding:15px 22px;border-right:0;border-bottom:1px solid #aeb396!important}.profile-cost-item:last-child{border-bottom:0!important}}

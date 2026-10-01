@@ -103,6 +103,7 @@ const siteText = {
     linkCopied: 'Profile link copied!',
     profileNextTitle: name => `Could ${name} be your new best friend?`,
     profileNextText: 'Adoption has no fee. Our volunteers will guide you through every step.',
+    messageUs: 'Message us',
     seeProcess: 'See the adoption process',
     notFoundTitle: 'We wandered off the path.',
     notFoundText: 'This page doesn’t exist, but the dogs are still waiting.',
@@ -175,6 +176,7 @@ const siteText = {
     linkCopied: 'Profil-Link kopiert!',
     profileNextTitle: name => `Könnte ${name} dein neuer bester Freund sein?`,
     profileNextText: 'Die Adoption hat keine Gebühr. Unsere Freiwilligen begleiten dich Schritt für Schritt.',
+    messageUs: 'Schreib uns',
     seeProcess: 'Ablauf ansehen',
     notFoundTitle: 'Wir sind vom Weg abgekommen.',
     notFoundText: 'Diese Seite gibt es nicht, aber die Hunde warten weiterhin.',
@@ -247,6 +249,7 @@ const siteText = {
     linkCopied: 'Ссылка на анкету скопирована!',
     profileNextTitle: name => `${name} может стать вашим новым лучшим другом?`,
     profileNextText: 'Усыновление без платы. Наши волонтёры помогут на каждом шаге.',
+    messageUs: 'Напишите нам',
     seeProcess: 'Посмотреть процесс',
     notFoundTitle: 'Мы немного сбились с пути.',
     notFoundText: 'Такой страницы нет, но собаки всё ещё ждут.',
@@ -564,6 +567,26 @@ function Footer({ text }) {
   return <footer><Logo text={text}/><p>{text.footerText}</p><div><a href={telegramUrl} target="_blank" rel="noreferrer">Telegram</a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp</a><a id="faq" href={emailUrl}>{text.emailUs}</a></div><small>© {new Date().getFullYear()} Paws from Georgia</small></footer>
 }
 
+function ProfileAdoptionPanel({ dog, text, openContact }) {
+  if (dog.status === 'home-found') {
+    return <section className="profile-next home-found"><Heart/><div><h2>{text.foundHomeTitle(dog.name)}</h2><p>{text.foundHomeText}</p></div></section>
+  }
+
+  return <section className="profile-adoption-panel">
+    <div className="profile-adoption-intro">
+      <Heart/>
+      <div><h2>{text.profileNextTitle(dog.name)}</h2><p>{text.profileNextText}</p></div>
+      <button className="button primary" type="button" onClick={openContact}><MessageCircle/> {text.messageUs}</button>
+    </div>
+    <div className="profile-costs">
+      <div className="profile-cost-item"><Syringe/><span><b>{text.costs[0][0]}</b><small>{text.costs[0][1]}</small></span></div>
+      <div className="profile-cost-item"><PawPrint/><span><b>{text.costs[1][0]}</b><small>{text.costs[1][1]}</small></span></div>
+      <div className="profile-cost-item"><Car/><span><b>{text.costs[2][0]}</b><small>{text.costs[2][1]}</small></span></div>
+      <div className="profile-cost-item love-only"><Heart/><b>{text.noFee}</b></div>
+    </div>
+  </section>
+}
+
 function HomePage({ lang, setLang, text, dogs }) {
   const [contactOpen, setContactOpen] = useState(false)
   return <><Header lang={lang} setLang={setLang} text={text} openContact={() => setContactOpen(true)}/><main><Hero text={text}/><AdoptionProcess text={text}/><VolunteerSection text={text} openContact={() => setContactOpen(true)}/><DogsSection dogs={dogs} text={text}/><ContactSection text={text} openContact={() => setContactOpen(true)}/></main><Footer text={text}/>{contactOpen && <ContactModal text={text} onClose={() => setContactOpen(false)}/>}</>
@@ -626,7 +649,7 @@ function DogProfile({ lang, setLang, text, dogs }) {
         <small>{viewerIndex + 1} / {dog.photos.length}</small>
       </div>
     </div>}
-    <section className={`profile-next${hasHome ? ' home-found' : ''}`}><Heart/><div><h2>{hasHome ? text.foundHomeTitle(dog.name) : text.profileNextTitle(dog.name)}</h2><p>{hasHome ? text.foundHomeText : text.profileNextText}</p></div>{!hasHome && <a className="button outline" href="/#process">{text.seeProcess}</a>}</section>
+    <ProfileAdoptionPanel dog={dog} text={text} openContact={() => setContactOpen(true)}/>
   </main><Footer text={text}/>{contactOpen && <ContactModal text={text} onClose={() => setContactOpen(false)}/>}</>
 }
 
